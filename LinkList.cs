@@ -85,27 +85,22 @@ namespace Lab4_LinkedList
 
         public void RemoveItem(int item)
         {
-            Link prev = list;
-            Link curr = list;
+           
+            Link temp = list;
+            
 
-            if (item.Equals(curr.Data))
-                list = curr.Next;
-            else
-            {
-                while (curr != null)
+            
+                while (temp != null)
                 {
-                    if (item.Equals(curr.Data))
-                    {
-                        prev.Next = curr.Next;
-                    }
-                    else
-                    {
-                        prev = curr;
-                        curr = curr.Next;
-                    }
+                    if (item.Equals(temp.Data))
+                    
+                        temp = temp.Next;
+
+                        Console.WriteLine(temp.Data);
+                        temp = temp.Next;
+                        
+                    
                 }
-            }
-        }
 
         
     }
